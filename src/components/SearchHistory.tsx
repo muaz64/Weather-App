@@ -22,7 +22,7 @@ const SearchHistory = () => {
     <div className="max-w-sm mx-auto mt-4">
       <button
         onClick={() => setShowHistory(!showHistory)}
-        className="text-xl font-bold mb-2"
+        className="text-xl  border rounded-4xl p-2 font-bold mb-2"
       >
         {showHistory ? 'Hide History' : 'Show History'}
       </button>
@@ -30,7 +30,7 @@ const SearchHistory = () => {
       {showHistory && (
         <>
           <div className="flex justify-between items-center mb-2">
-            <h3 className="text-lg font-semibold text-white">Search History</h3>
+           
             <button
               onClick={handleClear}
               className="text-sm text-red-500 hover:underline"
@@ -39,6 +39,7 @@ const SearchHistory = () => {
             </button>
           </div>
           <ul className="history">
+          <h3 className="text-lg text-center font-semibold text-white">Search History</h3>
             {history.map((city, index) => (
               <li
                 key={index}
