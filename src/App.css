@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+/* App.css */
+body.light {
+    background: linear-gradient(to bottom right, #bfdbfe, #60a5fa);
+    color: #1e293b; /* slate-800 */
+  }
+  
+  body.dark {
+    background: linear-gradient(to bottom right, #0f172a, #1e293b);
+    color: #f1f5f9; /* slate-100 */
+  }
+  
+  body.dark input {
+    background-color: #f2f7ff;
+    color: #000000;
+    border: 1px solid #566985;
+  }
+  body.dark button {
+    color: white;
+  }
+  
+  .card,
+  .history {
+    background-color: white;
+    color: black;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    transition: background 0.5s, color 0.5s;
+  }
+  
+  body.dark .card,
+  body.dark .history {
+    background-color: #426eb4;
+    color: #f1f5f9;
+  }
+  
