@@ -15,17 +15,19 @@ export const fetchWeather = createAsyncThunk(
 );
 
 interface WeatherState {
-  city: string;
-  data: any;
-  loading: boolean;
-  error: string | null;
+    city: string;
+    data: any;
+    loading: boolean;
+    error: string | null;
+    history: string[];
 }
 
 const initialState: WeatherState = {
-  city: '',
-  data: null,
-  loading: false,
-  error: null,
+    city: '',
+    data: null,
+    loading: false,
+    error: null,
+    history: JSON.parse(localStorage.getItem('weatherHistory') || '[]'),
 };
 
 const weatherSlice = createSlice({
@@ -45,6 +47,12 @@ const weatherSlice = createSlice({
       .addCase(fetchWeather.fulfilled, (state, action) => {
         state.loading = false;
         state.data = action.payload;
+      
+        const cityName = action.payload.name;
+        if (!state.history.includes(cityName)) {
+          state.history.push(cityName);
+          localStorage.setItem('weatherHistory', JSON.stringify(state.history));
+        }
       })
       .addCase(fetchWeather.rejected, (state, action) => {
         state.loading = false;
