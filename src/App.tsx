@@ -1,5 +1,6 @@
 import './App.css'
 import SearchBar from './components/SearchBar'
+import SearchHistory from './components/SearchHistory'
 import WeatherCard from './components/WeatherCard'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       </h1>
       <SearchBar />
       <WeatherCard />
+      <SearchHistory />
       </div>
       
   )
