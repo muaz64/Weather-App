@@ -6,5 +6,5 @@ export const store = configureStore ({
         weather: fetchWeather,
     }
 });
-export type RootstATE = ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
