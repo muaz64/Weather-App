@@ -16,7 +16,7 @@ const WeatherCard = () => {
   const icon = current.weather[0].icon;
 
   return (
-    <div className="card text-center max-w-sm mx-auto mt-6">
+    <div className="card text-center shadow-2xl max-w-sm mx-auto mt-6">
   <h2 className="text-2xl font-bold">{cityName}</h2>
   <p className="text-xl">{temperature}°C</p>
   <p className="capitalize">{description}</p>

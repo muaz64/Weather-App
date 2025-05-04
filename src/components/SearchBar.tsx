@@ -14,7 +14,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex gap-2 justify-center mt-6">
+    <div className="flex gap-2 justify-center drop-shadow-lg mt-6">
       <input
         type="text"
         placeholder="Enter city"
